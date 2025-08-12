@@ -88,22 +88,56 @@
 				<section>
 					<h2>Contact</h2>
 					<h3>Laissez nous un message</h3>
-					<form method="post" action="#">
-						<div class="fields">
-							<div class="field half">
-								<input type="text" name="name" id="name" placeholder="Votre nom" />
-							</div>
-							<div class="field half">
-								<input type="email" name="email" id="email" placeholder="Votre email" />
-							</div>
-							<div class="field">
-								<textarea name="message" id="message" placeholder="Votre message"></textarea>
-							</div>
-						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Envoyer" class="primary" /></li>
-						</ul>
-					</form>
+					<form
+  action="https://formspree.io/f/mrbljakq" 
+  method="POST"
+  data-email="contact@avocats-avantia.com"
+>
+  <!-- Vous pouvez personnaliser le sujet -->
+  <input type="hidden" name="_subject" value="Nouveau message depuis le site AVANTIA" />
+
+  <div class="fields">
+    <div class="field half">
+      <input 
+        type="text" 
+        name="name" 
+        id="name" 
+        placeholder="Votre nom" 
+        required 
+      />
+    </div>
+    <div class="field half">
+      <input 
+        type="email" 
+        name="email" 
+        id="email" 
+        placeholder="Votre email" 
+        required 
+      />
+    </div>
+    <div class="field">
+      <textarea 
+        name="message" 
+        id="message" 
+        placeholder="Votre message" 
+        required
+      ></textarea>
+    </div>
+  </div>
+
+  <ul class="actions">
+    <li>
+      <button type="submit" class="primary">
+        Envoyer
+      </button>
+    </li>
+  </ul>
+
+  <!-- OPTIONNEL : message de confirmation intégré -->
+  <div class="form-response" style="display:none; margin-top:1em; color:green;">
+    Merci pour votre message ! Nous vous répondrons bientôt.
+  </div>
+</form>
 				</section>
 				<ul class="copyright">
 					<li>&copy; 2025 AVANTIA AVOCATS CONSEILS D'ENTREPRISES. Tous droits réservés</li><br /><br />
